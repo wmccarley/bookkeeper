@@ -51,8 +51,8 @@ The second and third points are addressed in this proposal by adding optional le
 - In addition this proposal includes adding a `sealTime` property to the `LedgerMetadata` class to compliment the existing `ctime` property
 
 - Introduce a new concept of 'orphaned ledgers.' A ledger is considered orphaned if:
-    1. it was closed with `.expectDeleteAfter(delete_instant)` directive, and is still not deleted after `deleteInstant` + <server-side configured grace period>
-    2. it was opened with `childOfLedger(...)` directive and the associated parent ledger does not exist
+    1. it was closed with `.expectDeleteAfter(delete_instant)` directive, and is still not deleted after `deleteInstant` + `server-side configured grace period`
+    2. it was opened with `.childOfLedger(...)` directive and the associated parent ledger does not exist
 
 - Add a new CLI command for listing orphaned ledgers
 
